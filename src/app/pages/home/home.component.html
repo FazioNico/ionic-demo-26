@@ -1,4 +1,38 @@
 <ion-content>
-  <ion-button routerLink="settings">go settings</ion-button>
-  <ion-chip>my chip</ion-chip>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button routerLink="settings">go settings</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-chip>my chip</ion-chip>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="isModalOpen = true" expand="block">Open</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="isModalOpen = false">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="end">
+            <ion-button [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <h1>Hello from Modal</h1>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
 </ion-content>

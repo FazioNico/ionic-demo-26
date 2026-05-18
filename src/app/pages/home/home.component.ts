@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { IonButton, IonChip, IonContent } from '@ionic/angular/standalone';
+import { IonButton, IonChip, IonCol, IonContent, IonGrid, IonHeader, IonModal, IonRow, IonToolbar, IonButtons, IonTitle } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  imports: [IonContent, IonChip, IonButton, RouterLink]
+  imports: [IonContent, IonChip, IonButton, RouterLink, IonGrid, IonRow, IonCol, IonModal, IonHeader, IonToolbar, IonButtons, IonTitle]
 })
-export class HomeComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class HomeComponent  {
+  public isModalOpen: boolean = false;
 }
