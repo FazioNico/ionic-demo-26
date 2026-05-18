@@ -1,0 +1,21 @@
+:host {
+  h1 {
+    color: red;
+
+    span {
+      color: green;
+    }
+  }
+
+  button {
+    background-color: blue;
+  }
+}
+
+:host h1 {
+  color: red;
+}
+
+:host h1 span {
+  color: green;
+}
