@@ -7,8 +7,11 @@ import { IonContent } from '@ionic/angular/standalone';
   styleUrls: ['./settings.component.scss'],
   imports: [IonContent]
 })
-export class SettingsComponent implements OnInit {
+export class SettingsComponent {
   constructor() {}
 
-  ngOnInit() {}
+
+  ionViewWillEnter() {
+    alert('will enter')
+  }
 }
